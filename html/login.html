@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="../css/login.css" rel="stylesheet">
+
+    <title>Piece Dream</title>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <img src="../asset/loginBackground.png" class="background">
+    <div class="main">
+        <div class="logo_area">
+            <div class="logo">
+                <img src="../asset/pieceDreamLogo2.png" alt="" width="50px"><img src="../asset/pieceDreamTitle.png" alt="" width="146px" >
+            </div>
+        </div>
+        <div class="content">
+            <div class="introduce">
+                <div class="text">
+                    꿈을 기반으로 한 <br>
+                    그림AI를 <br>
+                    제작해 보세요!
+                </div>
+            </div>
+            <div class="guardBand"></div>
+            <div class="loginForm">
+                <form action="" method="post">
+                    <div class="login">
+                        로그인
+                    </div>
+                    <div class="loginForm_title">
+                        아이디
+                    </div>
+                    <input type="text" id="idInput" class = "focused" placeholder="아이디" spellcheck="false" required>
+                    <div class="loginForm_title">
+                        비밀번호
+                    </div>
+                    <input type="text" id="pwInput" class = "focused" placeholder="비밀번호" spellcheck="false" required>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark submit" type="submit">로그인</button>
+                        <div class="else">
+                            <div class="forget"><a href="#" class="text-decoration-none forget">로그인 정보를 잊으셨나요?</a></div>
+                            <div class="regist"><a href="#" class="text-decoration-none regist">회원가입하기</a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

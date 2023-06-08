@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    cursor: default;
+}
+.background{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+.logo_area {
+    margin-left: 25px;
+    padding-top: 20px;
+    width: fit-content;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Pretendard';
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+}
+.guardBand {
+    width: 200px;
+}
+
+.loginForm {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 455px;
+    height: 568px;
+    box-shadow: 0px 5px 5px #666;
+    padding: 100px 80px;
+}
+.login {
+    font-family: 'Pretendard';
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 46px;
+}
+.loginForm_title {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    margin-top: 20px;
+}
+#pwInput, #idInput{
+    margin-top: 8px;
+    padding: 14px 17px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    font-size: 13px;
+}
+textarea::placeholder, input::placeholder {
+    color: #d9d9d9;
+    font-size: 13px;
+}
+.submit {
+    margin-top: 26px;
+    height: 45px;
+    font-size: 16px;
+}
+.else {
+    display: flex;
+    justify-content: center;
+}
+.forget, .regist {
+    font-family: 'Pretendard';
+    font-size: 12px;
+    color: #7E7E89;
+}
+.regist {
+    font-weight: 700;
+    margin-left: 10px;
+}
+.regist:hover {
+    color: #000;
+}
+.forget:hover {
+    color: black;
+    text-decoration: underline;
+}
