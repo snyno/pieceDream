@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'GmarketSansMedium';
+    cursor: default;
+}
+.main {
+    height: 100%;
+}
+.left_nav {
+    position: fixed;
+    width: 220px;
+    border-right: 3px solid #eceff3;
+    height: 100%;
+}
+.navbar-brand {
+    /* height: 61px; */
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.nav_profile {
+    font-size: 15px;
+    border-bottom: 1px solid #eceff3;
+}
+.userImg {
+    margin: 10px 13px;
+}
+.nav_tab {
+    color: #ADADAD;
+    font-size: 13px;
+}
+.nav-link:focus, .nav-link:hover, .nav_profile {
+    color: #000;
+    font-weight: 700;
+}
+.logout {
+    font-size: 11px;
+}
+.container {
+    position: fixed;
+    top:0;
+    left: 220px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+.title {
+    margin-top: 90px;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.form {
+    width: 1000px;
+}
+
+textarea::placeholder, input::placeholder {
+    color: #d9d9d9;
+}
+
+.serach_bar{
+    margin-top: 20px;
+    padding: 14px 25px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    width: 90%;
+    resize: none;
+    outline: none;
+}
+
+.btn_dream_serach{
+    height: 50px;
+    width: 90px;
+    border-radius: 5px;
+    border: 1px solid #DB9EC0;
+    background-color: #DB9EC0; 
+    color: white;
+    margin-bottom: 30px;
+}
