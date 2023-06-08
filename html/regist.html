@@ -22,7 +22,7 @@
                 <form action="" method="post" class="form">
                     <div class="title">이메일</div>
                     <div class="input inputEmail">
-                        <input type="text" id="emailInput" class = "inputF" placeholder="이메일 계정" spellcheck="false" required>
+                        <input type="email" id="emailInput" class = "inputF" placeholder="이메일 계정" spellcheck="false" required>
                         <div class="emailCheck">인증하기</div>
                     </div>
                     <div class="title">이름</div>
@@ -31,12 +31,24 @@
                     </div>
                     <div class="title">생년월일</div>
                     <div class="input">
-                        <input type="text" id="birthInput" class = "inputF" placeholder="YYYYMMDD" spellcheck="false">
+                        <input type="text" id="birthInput" class = "inputF" placeholder="YYYY-MM-DD" spellcheck="false">
                     </div>
                     <div class="title">비밀번호</div>
                     <div class="input">
-                        <input type="text" id="pwInput" class = "inputF" placeholder="비밀번호 입력" spellcheck="false" required><br>
-                        <input type="text" id="pwCheckInput" class = "inputF" placeholder="비밀번호 확인" spellcheck="false" required>
+                        <input type="password" id="pwInput" class = "inputF" placeholder="비밀번호 입력" spellcheck="false" required><br>
+                        <input type="password" id="pwCheckInput" class = "inputF" placeholder="비밀번호 확인" spellcheck="false" required>
+                    </div>
+                    <div class="title">휴대폰</div>
+                    <div class="input">
+                        <input type="text" id= "telInput" class = "inputF" placeholder="010-1234-1234" spellcheck="false" required>
+                    </div>
+                    <div class="title">직업</div>
+                    <div class="input">
+                        <input type="text" id="jobInput" class = "inputF" placeholder="직업 입력" spellcheck="false" required>
+                    </div>
+                    <div class="title">직무분야</div>
+                    <div class="input">
+                        <input type="text" id="jobfieldInput" class = "inputF" placeholder="직무분야 입력" spellcheck="false" required>
                     </div>
                     <div class="agree">
                         <input type="checkbox" id="agreement" value="1"> <label for="agreement"><span>개인정보동의서(필수)</span></label>
