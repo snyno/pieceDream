@@ -1,12 +1,12 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 import urllib.request
 from selenium import webdriver
 from urllib.request import urlopen
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
+import os
+from PIL import Image # pip3 install pillow
 from datetime import datetime
 now = datetime.now()
 
@@ -55,8 +55,12 @@ if  __name__  ==  "__main__" :
     #상위 클래스(전체박스)
     v = driver.current_url
     print(v)
+    now = now.strftime("%Y%m%d_%H.%M")
+    path = "./img/"
+    os.chdir(path)
     divbox = driver.find_element(By.CLASS_NAME, "mimg").get_attribute("src")
-    urllib.request.urlretrieve(divbox, now.strftime("%Y%m%d_%H.%M") + "img.jpg")
+    urllib.request.urlretrieve(divbox, now + "img.jpg")
     print('다운로드 완료')
-    
+    img = Image.open(now+ "img.jpg")
+    img.show()
 
