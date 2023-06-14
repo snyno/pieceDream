@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 import urllib.request
 from selenium import webdriver
 from urllib.request import urlopen
@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 import os
+from PIL import Image # pip3 install pillow
 from datetime import datetime
 now = datetime.now()
 
