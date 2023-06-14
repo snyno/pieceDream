@@ -1,0 +1,44 @@
+
+
+/* e8530f73_color_cmyk 뷰 생성 */
+-- select * from e8530f73_color_cmyk
+CREATE OR REPLACE VIEW e8530f73_color_cmyk AS
+SELECT stage, MOD((SUM(minutes) / 1000) * 1000, 256) AS color
+FROM (
+  SELECT stage, EXTRACT(MINUTE FROM create_time - start_time) AS minutes
+  FROM sleep
+  WHERE sleep_id = 'e8530f73-0000-0000-0000-000000000000'
+)
+GROUP BY stage
+ORDER BY stage;
+
+/* e8530f73_color_rgb 뷰 생성 */
+-- select * from e8530f73_color_rgb
+CREATE OR REPLACE VIEW e8530f73_color_rgb AS
+SELECT stage, ROUND(TO_CHAR(255 * (1 - color / 100) * (1 - (SELECT color FROM e8530f73_color_cmyk WHERE stage = 40003) / 1000))) AS rgb
+FROM e8530f73_color_cmyk;
+
+
+
+/* cmyk -> rgb */
+select stage, to_char(round(to_number(rgb)),'FMXXXXXXXX') as hex from e8530f73_color_rgb;
+
+
+
+/* 한 단어로 표현하는 뷰 생성(ex. 6f8de2 등) */
+create view rgb_20210224 as
+SELECT LISTAGG(
+         CASE WHEN rn = 1 THEN hex ELSE NULL END ||
+         CASE WHEN rn = 2 THEN hex ELSE NULL END ||
+         CASE WHEN rn = 4 THEN hex ELSE NULL END,
+         ''
+       ) WITHIN GROUP (ORDER BY rn) AS combined_values
+FROM (
+  SELECT rownum as rn, TO_CHAR(ROUND(TO_NUMBER(rgb)), 'FMXXXXXXXX') AS hex
+  FROM e8530f73_color_rgb
+  WHERE rownum <= 4
+)
+GROUP BY 1;
+
+
+
